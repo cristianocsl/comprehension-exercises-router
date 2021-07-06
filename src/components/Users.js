@@ -4,15 +4,18 @@ class Users extends Component {
   render() {
     const {
       greetingsMessage = 'Hi There',
-      match: { params: { id } }
-    } = this.props;
-      return (
-        <div>
-          <h2>Users</h2>
-          <p>{ `${greetingsMessage} User ${id}` }, this is my awesome Users component</p>
-        </div>
+      match: { params: { id }
+    } } = this.props;
+
+    return (
+      <main>
+        <h2> Users </h2>
+        <p>
+        { `${greetingsMessage} User ${id}` }, this is my awesome Users component
+        </p>
+      </main>
     );
   }
-};
+}
 
 export default Users;
