@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 
 class Users extends Component {
   render() {
-    const { greetingsMessage = 'Olá mundo' } = this.props;
+    const {
+      greetingsMessage = 'Hi There',
+      match: { params: { id } }
+    } = this.props;
       return (
         <div>
           <h2>Users</h2>
-          <p> { greetingsMessage }, My awesome Users component </p>
+          <p>{ `${greetingsMessage} User ${id}` }, this is my awesome Users component</p>
         </div>
     );
   }
